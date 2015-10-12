@@ -1,0 +1,14 @@
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\SqlOrderingSystem.exe.config
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\CustomersDB.mdf
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\CustomersDB_log.ldf
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\SqlOrderingSystem.exe
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\SqlOrderingSystem.pdb
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.MainForm.resources
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.Properties.Resources.resources
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.csproj.GenerateResource.Cache
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.exe
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.pdb
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.AddCustomerForm.resources
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.UpdateFormCustomer.resources
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.csprojResolveAssemblyReference.cache
+C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.OrdersForm.resources
