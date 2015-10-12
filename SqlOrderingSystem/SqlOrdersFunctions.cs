@@ -12,7 +12,7 @@ namespace SqlOrderingSystem
 {
     class SqlOrdersFunctions
     {
-        static private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\CustomersDB.mdf;Integrated Security=True");
+        static private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\CustomersDB.mdf;Integrated Security=True");
         static public void Read(DataGridView _datagridview)
         {
             try
@@ -97,16 +97,16 @@ namespace SqlOrderingSystem
                 connection.Close();
             }
         }
-             /// <summary>
-             /// Διαγράφη όλες τις παραγγελίες του Πελάτη
-             /// </summary>
-             /// <param name="_customer"></param>
+        /// <summary>
+        /// Διαγράφη όλες τις παραγγελίες του Πελάτη
+        /// </summary>
+        /// <param name="_customer"></param>
         static public void Delete(Customer _customer)
         {
             connection.Open();
             try
             {
-                string query = "DELETE FROM Orders where IDCUSTOMER = @idcustomer";
+                string query = "DELETE FROM Orders where IDCUSTOMER LIKE @idcustomer";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@idcustomer", _customer.ID);
                 cmd.ExecuteNonQuery();
@@ -131,7 +131,7 @@ namespace SqlOrderingSystem
             connection.Open();
             try
             {
-                string query = "DELETE FROM Orders where ORDERNO = @orderno";
+                string query = "DELETE FROM Orders where ORDERNO LIKE @orderno";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@orderno", _order.Orderno);
                 cmd.ExecuteNonQuery();

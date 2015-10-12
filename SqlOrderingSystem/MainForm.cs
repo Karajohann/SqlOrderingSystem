@@ -31,7 +31,7 @@ namespace SqlOrderingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ο πελάτης αν έχει παραγγελίες θα σβηστούν και αυτές είστε σίγουροι ότι θέλετε να τον σβήσετε;","Προσοχή!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if(MessageBox.Show("Αν ο πελάτης έχει ενεργές παραγγελίες θα σβηστούν και αυτές.\n Είστε σίγουροι ότι θέλετε αυτήν την διαγραφή;","Προσοχή!",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)==DialogResult.Yes)
             {
                 SqlOrdersFunctions.Delete(ParsedCustomer());
                 SqlCustomerFunctions.Delete(ParsedCustomer());
@@ -59,7 +59,7 @@ namespace SqlOrderingSystem
 
         private Customer ParsedCustomer()
         {
-            DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;
+            DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;            
             int id = Convert.ToInt32(row.Cells[0].Value.ToString());
             string firstname = row.Cells[1].Value.ToString();
             string lastname = row.Cells[2].Value.ToString();

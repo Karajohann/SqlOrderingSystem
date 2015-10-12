@@ -133,11 +133,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CustomersDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="CustomersDB.mdf" />
     <Content Include="CustomersDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>CustomersDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

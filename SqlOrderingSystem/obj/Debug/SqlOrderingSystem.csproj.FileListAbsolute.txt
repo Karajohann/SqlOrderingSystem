@@ -16,8 +16,6 @@ C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\Sq
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\SqlOrderingSystem.exe.config
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.exe
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.pdb
-C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\CustomersDB_log.ldf
-C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\CustomersDB.mdf
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\SqlOrderingSystem.exe
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\bin\Debug\SqlOrderingSystem.pdb
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.AddCustomerForm.resources
