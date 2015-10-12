@@ -65,12 +65,18 @@
     <Compile Include="AddCustomerForm.Designer.cs">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs" />
-    <Compile Include="OrdersForm.cs">
+    <Compile Include="AllOrdersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrdersForm.Designer.cs">
-      <DependentUpon>OrdersForm.cs</DependentUpon>
+    <Compile Include="AllOrdersForm.Designer.cs">
+      <DependentUpon>AllOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs" />
+    <Compile Include="OrdersCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersCustomerForm.Designer.cs">
+      <DependentUpon>OrdersCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlOrdersFunctions.cs" />
     <Compile Include="UpdateFormCustomer.cs">
@@ -92,11 +98,14 @@
     <EmbeddedResource Include="AddCustomerForm.resx">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AllOrdersForm.resx">
+      <DependentUpon>AllOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrdersForm.resx">
-      <DependentUpon>OrdersForm.cs</DependentUpon>
+    <EmbeddedResource Include="OrdersCustomerForm.resx">
+      <DependentUpon>OrdersCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

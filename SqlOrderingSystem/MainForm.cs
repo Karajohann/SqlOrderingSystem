@@ -31,8 +31,12 @@ namespace SqlOrderingSystem
 
         private void button3_Click(object sender, EventArgs e)
         {
-            SqlCustomerFunctions.Delete(ParsedCustomer());
-            MainForm_Load(this, null);
+            if (MessageBox.Show("Ο πελάτης αν έχει παραγγελίες θα σβηστούν και αυτές είστε σίγουροι ότι θέλετε να τον σβήσετε;","Προσοχή!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                SqlOrdersFunctions.Delete(ParsedCustomer());
+                SqlCustomerFunctions.Delete(ParsedCustomer());
+                MainForm_Load(this, null);
+            }
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
@@ -40,7 +44,20 @@ namespace SqlOrderingSystem
             UpdateFormCustomer UFC = new UpdateFormCustomer(ParsedCustomer());
             UFC.Show();
         }
-        public Customer ParsedCustomer()
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OrdersCustomerForm OF = new OrdersCustomerForm(ParsedCustomer());
+            OF.Show();
+        }
+
+        private void btnAllOrders_Click(object sender, EventArgs e)
+        {
+            AllOrdersForm AOF = new AllOrdersForm();
+            AOF.Show();
+        }
+
+        private Customer ParsedCustomer()
         {
             DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;
             int id = Convert.ToInt32(row.Cells[0].Value.ToString());
@@ -56,11 +73,6 @@ namespace SqlOrderingSystem
             Cust.Address = address;
             return Cust;
         }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            OrdersForm OF = new OrdersForm();
-            OF.Show();
-        }
     }
+
 }

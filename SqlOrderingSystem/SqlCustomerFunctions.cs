@@ -12,7 +12,7 @@ namespace SqlOrderingSystem
 {
     static class SqlCustomerFunctions
     {
-        static private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Giannis\Dropbox\GitHub\SqlOrderingSystem\SqlOrderingSystem\CustomersDB.mdf;Integrated Security=True");
+        static private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\CustomersDB.mdf;Integrated Security=True");
 
         static public void Read(DataGridView _datagridview)
         {
