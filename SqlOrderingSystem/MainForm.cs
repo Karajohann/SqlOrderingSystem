@@ -20,6 +20,8 @@ namespace SqlOrderingSystem
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            System.Windows.Forms.ToolTip ToolTip1 = new System.Windows.Forms.ToolTip();
+            ToolTip1.SetToolTip(this.button1, "Ανανέωση");
             SqlCustomerFunctions.Read(this.dataGridView1);
         }
 
@@ -57,6 +59,11 @@ namespace SqlOrderingSystem
             AOF.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainForm_Load(this, null);
+        }
+
         private Customer ParsedCustomer()
         {
             DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;            
@@ -73,6 +80,8 @@ namespace SqlOrderingSystem
             Cust.Address = address;
             return Cust;
         }
+
+
     }
 
 }

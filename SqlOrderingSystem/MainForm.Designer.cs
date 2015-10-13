@@ -33,12 +33,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnAllOrders = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +71,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 46);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 47);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -82,15 +84,14 @@
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(161)));
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(713, 444);
+            this.dataGridView1.Size = new System.Drawing.Size(712, 302);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnAddCustomer
             // 
-            this.btnAddCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAddCustomer.Location = new System.Drawing.Point(12, 5);
+            this.btnAddCustomer.Location = new System.Drawing.Point(57, 5);
             this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(108, 35);
+            this.btnAddCustomer.Size = new System.Drawing.Size(108, 36);
             this.btnAddCustomer.TabIndex = 1;
             this.btnAddCustomer.Text = "Προσθήκη Πελάτη";
             this.btnAddCustomer.UseVisualStyleBackColor = true;
@@ -98,10 +99,9 @@
             // 
             // btnUpdateCustomer
             // 
-            this.btnUpdateCustomer.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnUpdateCustomer.Location = new System.Drawing.Point(126, 5);
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(171, 5);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
-            this.btnUpdateCustomer.Size = new System.Drawing.Size(108, 35);
+            this.btnUpdateCustomer.Size = new System.Drawing.Size(108, 36);
             this.btnUpdateCustomer.TabIndex = 2;
             this.btnUpdateCustomer.Text = "Ενημέρωση Πελάτη";
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
@@ -109,10 +109,9 @@
             // 
             // button3
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.Location = new System.Drawing.Point(240, 5);
+            this.button3.Location = new System.Drawing.Point(285, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 35);
+            this.button3.Size = new System.Drawing.Size(108, 36);
             this.button3.TabIndex = 3;
             this.button3.Text = "Διαγραφή Πελάτη";
             this.button3.UseVisualStyleBackColor = true;
@@ -120,10 +119,9 @@
             // 
             // button4
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button4.Location = new System.Drawing.Point(354, 5);
+            this.button4.Location = new System.Drawing.Point(399, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 35);
+            this.button4.Size = new System.Drawing.Size(108, 36);
             this.button4.TabIndex = 4;
             this.button4.Text = "Παραγγελίες Πελάτη";
             this.button4.UseVisualStyleBackColor = true;
@@ -131,29 +129,40 @@
             // 
             // btnAllOrders
             // 
-            this.btnAllOrders.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAllOrders.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAllOrders.Location = new System.Drawing.Point(617, 5);
             this.btnAllOrders.Name = "btnAllOrders";
-            this.btnAllOrders.Size = new System.Drawing.Size(108, 35);
+            this.btnAllOrders.Size = new System.Drawing.Size(108, 36);
             this.btnAllOrders.TabIndex = 5;
             this.btnAllOrders.Text = "Παραγγελίες";
             this.btnAllOrders.UseVisualStyleBackColor = true;
             this.btnAllOrders.Click += new System.EventHandler(this.btnAllOrders_Click);
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(12, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(39, 36);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 502);
+            this.ClientSize = new System.Drawing.Size(736, 361);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAllOrders);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnUpdateCustomer);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.dataGridView1);
+            this.MinimumSize = new System.Drawing.Size(752, 400);
             this.Name = "MainForm";
             this.Text = "Ordering System";
-            this.Activated += new System.EventHandler(this.MainForm_Load);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -168,6 +177,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnAllOrders;
+        private System.Windows.Forms.Button button1;
     }
 }
 
