@@ -17,7 +17,9 @@ namespace SqlOrderingSystem
             InitializeComponent();
             label1.Text = _customer.ID.ToString();
             label2.Text = _customer.FirstName;
+            label2.Dock = DockStyle.Left | DockStyle.Top;
             label3.Text = _customer.LastName;
+            label3.Dock = DockStyle.Left | DockStyle.Top;
             label4.Text = _customer.Telephone;
             label6.Text = _customer.Address;
         }
