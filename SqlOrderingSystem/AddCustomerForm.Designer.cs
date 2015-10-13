@@ -127,6 +127,9 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(351, 191);
+            this.MinimumSize = new System.Drawing.Size(351, 191);
             this.Name = "AddCustomerForm";
             this.Text = "AddCustomerForm";
             this.ResumeLayout(false);

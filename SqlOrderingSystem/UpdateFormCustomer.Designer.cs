@@ -194,6 +194,9 @@
             this.Controls.Add(this.ExistLNameBox);
             this.Controls.Add(this.ExistFNameBox);
             this.Controls.Add(this.IdLabel);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(536, 263);
+            this.MinimumSize = new System.Drawing.Size(536, 263);
             this.Name = "UpdateFormCustomer";
             this.Text = "UpdateForm";
             this.ResumeLayout(false);
