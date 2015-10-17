@@ -142,11 +142,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Logger.mdf" />
+    <None Include="Logger.mdf" />
     <Content Include="Logger_log.ldf">
       <DependentUpon>Logger.mdf</DependentUpon>
     </Content>
-    <Content Include="CustomersDB.mdf" />
+    <None Include="CustomersDB.mdf" />
     <Content Include="CustomersDB_log.ldf">
       <DependentUpon>CustomersDB.mdf</DependentUpon>
     </Content>

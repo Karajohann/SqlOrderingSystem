@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SqlOrderingSystem
 {
@@ -79,6 +80,11 @@ namespace SqlOrderingSystem
             Cust.Telephone = telephone;
             Cust.Address = address;
             return Cust;
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SqlConnection.ClearAllPools();
         }
 
 

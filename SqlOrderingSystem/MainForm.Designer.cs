@@ -163,6 +163,7 @@
             this.MinimumSize = new System.Drawing.Size(752, 400);
             this.Name = "MainForm";
             this.Text = "Ordering System";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

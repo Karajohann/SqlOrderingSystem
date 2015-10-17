@@ -24,11 +24,12 @@ namespace SqlOrderingSystem
             string Password = textBox2.Text;
             if (textBox1.Text != "" & textBox2.Text != "")
             {
-                string queryText = @"SELECT Count(*) FROM LOGINFOS 
-                             WHERE username = @Username AND password = @Password";
-                using (SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\Logger.mdf;Integrated Security=True"))
-                using (SqlCommand cmd = new SqlCommand(queryText, cn))
+                SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\Logger.mdf;Integrated Security=True");
+                try
                 {
+                    string queryText = @"SELECT Count(*) FROM LOGINFOS 
+                             WHERE username = @Username AND password = @Password";
+                    SqlCommand cmd = new SqlCommand(queryText, cn);
                     cn.Open();
                     cmd.Parameters.AddWithValue("@Username", Username);
                     cmd.Parameters.AddWithValue("@Password", Password);
@@ -37,13 +38,31 @@ namespace SqlOrderingSystem
                     {
                         MessageBox.Show("Loggen In!");
                         DialogResult = DialogResult.OK;
+                        cn.Close();
                     }
                     else
                     {
                         MessageBox.Show("User Not Found!");
+                        SqlConnection.ClearAllPools();
                     }
                 }
-            }                
+                catch(SqlException exception)
+                {
+                    MessageBox.Show(exception.ToString());
+                }
+                finally
+                {
+                    if(cn.State == ConnectionState.Open)
+                    {
+                        cn.Close();
+                    }
+                }
+
+            }
+            SqlConnection.ClearAllPools();
+            textBox1.Clear();
+            textBox2.Clear();
+
         }
     }
 }
