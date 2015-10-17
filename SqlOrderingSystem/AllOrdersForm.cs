@@ -19,7 +19,7 @@ namespace SqlOrderingSystem
 
         private void AllOrdersForm_Load(object sender, EventArgs e)
         {
-            SqlOrdersFunctions.Read(this.dataGridView1);
+            SqlOrdersFunctions.ReadbyCustomer(this.dataGridView1);
         }
     }
 }

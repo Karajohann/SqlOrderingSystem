@@ -37,27 +37,35 @@ namespace SqlOrderingSystem
 
         static public void Create(Customer _customer)
         {
+            bool process = true;
             connection.Open();
             try
             {
                 //Περιορισμοί για τα NOT NULL πεδία
-                if (_customer.FirstName == string.Empty) throw new Exception("Το όνομα δεν μπορεί να είναι κενό");
-                if (_customer.LastName == string.Empty) throw new Exception("Το επώνυμο δεν μπορεί να είναι κενό");
+                if (_customer.FirstName == string.Empty || _customer.FirstName == null) throw new Exception("Το όνομα δεν μπορεί να είναι κενό");
+                {process = false;}
+                if (_customer.LastName == string.Empty || _customer.LastName == null) throw new Exception("Το επώνυμο δεν μπορεί να είναι κενό");
+                {process = false;}
 
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO Customers (FIRSTNAME, LASTNAME, TELEPHONE, ADDRESS) VALUES (@fname, @lname, @tel, @address)", connection);
-                cmd.Parameters.AddWithValue("@fname", _customer.FirstName);
-                cmd.Parameters.AddWithValue("@lname", _customer.LastName);
-                cmd.Parameters.AddWithValue("@tel", _customer.Telephone);
-                cmd.Parameters.AddWithValue("@address", _customer.Address);
-                cmd.ExecuteNonQuery();
+                if (process == true)
+                {
+                    SqlCommand cmd = new SqlCommand(@"INSERT INTO Customers (FIRSTNAME, LASTNAME, TELEPHONE, ADDRESS) VALUES (@fname, @lname, @tel, @address)", connection);
+                    cmd.Parameters.AddWithValue("@fname", _customer.FirstName);
+                    cmd.Parameters.AddWithValue("@lname", _customer.LastName);
+                    cmd.Parameters.AddWithValue("@tel", _customer.Telephone);
+                    cmd.Parameters.AddWithValue("@address", _customer.Address);
+                    cmd.ExecuteNonQuery();
+                }
             }
             catch (SqlException e)
             {
                 MessageBox.Show(e.ToString());
+                process = false;
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.ToString());
+                MessageBox.Show(exception.Message);
+                process = false;
             }
             finally
             {

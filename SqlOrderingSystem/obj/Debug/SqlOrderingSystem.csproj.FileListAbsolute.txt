@@ -25,4 +25,5 @@ C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.Properties.Resources.resources
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.UpdateFormCustomer.resources
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.csproj.GenerateResource.Cache
+C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.LoginForm.resources
 C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\obj\Debug\SqlOrderingSystem.csprojResolveAssemblyReference.cache

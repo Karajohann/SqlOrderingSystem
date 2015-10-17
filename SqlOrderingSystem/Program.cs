@@ -16,7 +16,16 @@ namespace SqlOrderingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            LoginForm loginform = new LoginForm();
+            if (loginform.ShowDialog() == DialogResult.OK)
+            {
+                loginform.Dispose();
+                Application.Run(new MainForm());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }

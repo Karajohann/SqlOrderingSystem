@@ -13,6 +13,10 @@ namespace SqlOrderingSystem
     class SqlOrdersFunctions
     {
         static private SqlConnection connection = new SqlConnection(@"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Giannis\Documents\GitHub\SqlOrderingSystem\SqlOrderingSystem\CustomersDB.mdf;Integrated Security=True");
+        /// <summary>
+        /// Τοποθετώντας ένα Datagridview δίνει σαν αποτέλεσμα όλα τα στοιχεία του πίνακα
+        /// </summary>
+        /// <param name="_datagridview"></param>
         static public void Read(DataGridView _datagridview)
         {
             try
@@ -33,7 +37,35 @@ namespace SqlOrderingSystem
                 connection.Close();
             }
         }
-
+        /// <summary>
+        /// Επιστρέφει πίνακα με πελάτες και παραγγελίες
+        /// </summary>
+        /// <param name="_datagridview"></param>
+        static public void ReadbyCustomer(DataGridView _datagridview)
+        {
+            try
+            {
+                connection.Open();
+                string query = "SELECT Customers.FIRSTNAME, Customers.LASTNAME, Orders.ORDERNO, Orders.DΕSCRIPTION FROM Orders INNER JOIN Customers ON Customers.ID=Orders.IDCUSTOMER ORDER BY Customers.LASTNAME";
+                SqlDataAdapter DA = new SqlDataAdapter(query, connection);
+                DataTable DT = new DataTable();
+                DA.Fill(DT);
+                _datagridview.DataSource = DT;
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
+        /// <summary>
+        /// Επιστρέφει στο DataGridView τα στοιχεία του πίνακα που ανήκουν στον συγκεκριμένο Πελάτη _customer
+        /// </summary>
+        /// <param name="_datagridview"></param>
+        /// <param name="_customer"></param>
         static public void Read(DataGridView _datagridview, Customer _customer)
         {
             connection.Open();
@@ -98,7 +130,7 @@ namespace SqlOrderingSystem
             }
         }
         /// <summary>
-        /// Διαγράφη όλες τις παραγγελίες του Πελάτη
+        /// Διαγράφει όλες τις παραγγελίες του Πελάτη
         /// </summary>
         /// <param name="_customer"></param>
         static public void Delete(Customer _customer)
