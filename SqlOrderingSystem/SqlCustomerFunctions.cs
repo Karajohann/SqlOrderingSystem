@@ -23,6 +23,10 @@ namespace SqlOrderingSystem
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
                 _datagridview.DataSource = DT;
+                _datagridview.Columns[1].HeaderText = "Όνομα";
+                _datagridview.Columns[2].HeaderText = "Επώνυμο";
+                _datagridview.Columns[3].HeaderText = "Τηλέφωνο";
+                _datagridview.Columns[4].HeaderText = "Διεύθυνση";
 
             }
             catch (SqlException e)
@@ -31,10 +35,7 @@ namespace SqlOrderingSystem
             }
             finally
             {
-                if (connection.State == ConnectionState.Open)
-                {
-                    connection.Close();
-                }
+                connection.Close();
             }
         }
 

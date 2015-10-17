@@ -180,6 +180,7 @@
             this.Controls.Add(this.dataGridView1);
             this.MinimumSize = new System.Drawing.Size(650, 375);
             this.Name = "OrdersCustomerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrdersForm";
             this.Activated += new System.EventHandler(this.OrdersForm_Load);
             this.Load += new System.EventHandler(this.OrdersForm_Load);

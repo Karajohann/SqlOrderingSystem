@@ -17,6 +17,7 @@ namespace SqlOrderingSystem
         /// Τοποθετώντας ένα Datagridview δίνει σαν αποτέλεσμα όλα τα στοιχεία του πίνακα
         /// </summary>
         /// <param name="_datagridview"></param>
+        //Αυτή την είχα κάνει πρόχειρα για να βλέπω όλες τις παραγγελίες αλλά μετά την άλλαξα με JOIN
         static public void Read(DataGridView _datagridview)
         {
             try
@@ -26,6 +27,9 @@ namespace SqlOrderingSystem
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
                 _datagridview.DataSource = DT;
+                _datagridview.Columns[0].HeaderText = "Νούμερο Παραγγελίας";
+                _datagridview.Columns[1].HeaderText = "Κωδικός Πελάτη";
+                _datagridview.Columns[2].HeaderText = "Περιγραφή";
 
             }
             catch (SqlException e)
@@ -51,6 +55,10 @@ namespace SqlOrderingSystem
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
                 _datagridview.DataSource = DT;
+                _datagridview.Columns[0].HeaderText = "Όνομα";
+                _datagridview.Columns[1].HeaderText = "Επώνυμο";
+                _datagridview.Columns[2].HeaderText = "Νούμερο Παραγγελίας";
+                _datagridview.Columns[3].HeaderText = "Περιγραφή";
             }
             catch (SqlException e)
             {
@@ -76,6 +84,9 @@ namespace SqlOrderingSystem
                 DataTable DT = new DataTable();
                 DA.Fill(DT);
                 _datagridview.DataSource = DT;
+                _datagridview.Columns[0].HeaderText = "Νούμερο Παραγγελίας";
+                _datagridview.Columns[1].HeaderText = "Κωδικός Πελάτη";
+                _datagridview.Columns[2].HeaderText = "Περιγραφή";
             }
             catch (SqlException e)
             {

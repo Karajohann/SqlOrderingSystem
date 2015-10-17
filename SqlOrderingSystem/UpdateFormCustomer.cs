@@ -21,11 +21,15 @@ namespace SqlOrderingSystem
             ExistLNameBox.Text = _existcustomer.LastName;
             ExistTelBox.Text = _existcustomer.Telephone;
             ExistAddressBox.Text = _existcustomer.Address;
-        }
-
+        } 
         private void button1_Click(object sender, EventArgs e)
         {
-            Customer cust = new Customer();
+            SqlCustomerFunctions.Update(ParsedCustomer());
+            this.FindForm().Dispose();
+        }  
+        private Customer ParsedCustomer()
+        {
+            var cust = new Customer();
             cust.ID = Convert.ToInt32(IDBox.Text);
             if (ReplaceFNameBox.Text == string.Empty || ReplaceFNameBox == null)
             {
@@ -63,9 +67,8 @@ namespace SqlOrderingSystem
             {
                 cust.Address = ReplaceAddressBox.Text;
             }
+            return cust;
 
-            SqlCustomerFunctions.Update(cust);
-            this.FindForm().Dispose();
         }
     }
 }

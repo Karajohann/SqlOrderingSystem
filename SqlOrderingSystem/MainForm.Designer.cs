@@ -37,10 +37,10 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDeleteCustomer = new System.Windows.Forms.Button();
+            this.btnOrdersCustomer = new System.Windows.Forms.Button();
             this.btnAllOrders = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,25 +107,25 @@
             this.btnUpdateCustomer.UseVisualStyleBackColor = true;
             this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
             // 
-            // button3
+            // btnDeleteCustomer
             // 
-            this.button3.Location = new System.Drawing.Point(285, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 36);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Διαγραφή Πελάτη";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnDeleteCustomer.Location = new System.Drawing.Point(285, 5);
+            this.btnDeleteCustomer.Name = "btnDeleteCustomer";
+            this.btnDeleteCustomer.Size = new System.Drawing.Size(108, 36);
+            this.btnDeleteCustomer.TabIndex = 3;
+            this.btnDeleteCustomer.Text = "Διαγραφή Πελάτη";
+            this.btnDeleteCustomer.UseVisualStyleBackColor = true;
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
-            // button4
+            // btnOrdersCustomer
             // 
-            this.button4.Location = new System.Drawing.Point(399, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 36);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Παραγγελίες Πελάτη";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnOrdersCustomer.Location = new System.Drawing.Point(399, 5);
+            this.btnOrdersCustomer.Name = "btnOrdersCustomer";
+            this.btnOrdersCustomer.Size = new System.Drawing.Size(108, 36);
+            this.btnOrdersCustomer.TabIndex = 4;
+            this.btnOrdersCustomer.Text = "Παραγγελίες Πελάτη";
+            this.btnOrdersCustomer.UseVisualStyleBackColor = true;
+            this.btnOrdersCustomer.Click += new System.EventHandler(this.btnOrdersCustomer_Click);
             // 
             // btnAllOrders
             // 
@@ -138,25 +138,25 @@
             this.btnAllOrders.UseVisualStyleBackColor = true;
             this.btnAllOrders.Click += new System.EventHandler(this.btnAllOrders_Click);
             // 
-            // button1
+            // btnRefresh
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(12, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 36);
-            this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.Location = new System.Drawing.Point(12, 5);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(39, 36);
+            this.btnRefresh.TabIndex = 6;
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 361);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnAllOrders);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnOrdersCustomer);
+            this.Controls.Add(this.btnDeleteCustomer);
             this.Controls.Add(this.btnUpdateCustomer);
             this.Controls.Add(this.btnAddCustomer);
             this.Controls.Add(this.dataGridView1);
@@ -175,10 +175,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Button btnUpdateCustomer;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDeleteCustomer;
+        private System.Windows.Forms.Button btnOrdersCustomer;
         private System.Windows.Forms.Button btnAllOrders;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
 

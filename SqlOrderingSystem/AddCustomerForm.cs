@@ -19,13 +19,17 @@ namespace SqlOrderingSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Customer cust = new Customer();
+            SqlCustomerFunctions.Create(ParsedCustomer());
+            this.FindForm().Dispose();
+        }  
+        private Customer ParsedCustomer()
+        {
+            var cust = new Customer();
             cust.FirstName = textBox1.Text;
             cust.LastName = textBox2.Text;
             cust.Telephone = textBox3.Text;
             cust.Address = textBox4.Text;
-            SqlCustomerFunctions.Create(cust);
-            this.FindForm().Dispose();
+            return cust;
         }
 
 

@@ -131,6 +131,7 @@
             this.MaximumSize = new System.Drawing.Size(351, 191);
             this.MinimumSize = new System.Drawing.Size(351, 191);
             this.Name = "AddCustomerForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomerForm";
             this.ResumeLayout(false);
             this.PerformLayout();

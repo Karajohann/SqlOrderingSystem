@@ -55,6 +55,7 @@
             this.ClientSize = new System.Drawing.Size(745, 434);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AllOrdersForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AllOrdersForm";
             this.Activated += new System.EventHandler(this.AllOrdersForm_Load);
             this.Load += new System.EventHandler(this.AllOrdersForm_Load);
